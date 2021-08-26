@@ -8,8 +8,7 @@
 body {
   background-color:#000;
   overflow-x: hidden;
-  padding-bottom: 500px;
-  /* place-items: center; */
+  padding-bottom: 250px;
 }
 
 h1 {
@@ -23,14 +22,11 @@ h1 {
   position: relative;
   width: 70%;
   margin: auto;
-  /* max-height:80vw; */
-  /* overflow: hidden; */
 }
 
 .carousel-slide {
   display: flex;
   width: 100%;
-  height: 500px;
 }
 
 .carousel-slide img {
@@ -66,7 +62,6 @@ h1 {
 }
 .circleBtnContainer {
   color: #fff;
-  height: 100%;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -74,11 +69,11 @@ h1 {
   width: 30%;
   cursor: pointer;
   margin-top:10px ;
+  font-size: 12px;
+  font-weight: 400;
 }
 .circleBtnContainer i {
   color: #fff;
-  font-size: 12px;
-  font-weight: 400;
   opacity: 0.5;
   transition: all 0.3s;
   background-color: #fff;
@@ -91,36 +86,46 @@ h1 {
     opacity: 1;
 }
 /* responsive  */
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1441px) {
   .carousel-container {
-    width: 90%;
+    width: 75%;
   }
   body {
     background-color: rgb(85, 84, 84);
-  }
-  .carousel-container {
-    overflow: hidden;
   }
 }
 @media only screen and (max-width: 1025px) {
   body{
     background-color: rgb(156, 102, 0);
   }
+  h1 {
+    margin: 5px 0 10px 0;
+    font-weight: 100;
+  }
+  .carousel-container {
+    overflow: hidden;  
+  }
 }
 
 @media only screen and (max-width: 769px) {
   body {
+    background-color: rgb(125, 199, 29);
     padding-bottom: 100px;
   }
   .carousel-container {
     width: 96%;
     overflow: hidden;
   }
-  /* .carousel-slide {
-    padding: 50px 0;
-  } */
 }
 @media only screen and (max-width: 426px) {
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+  h1{
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    font-weight: 100;
+  }
   .carousel-container {
     overflow: hidden;
     width: 95%;
@@ -139,5 +144,11 @@ h1 {
     width: 100%;
     object-fit: contain;
     object-position: center;
+  }
+  .circleBtnContainer {
+    width: 60%;
+    margin-top: 5px;
+    font-size: 2px;
+    font-weight: 100;
   }
 }
