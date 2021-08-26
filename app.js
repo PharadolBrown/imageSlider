@@ -6,7 +6,7 @@ const carouselSlide = document.querySelector(".carousel-slide");
 const carouselContainer = document.querySelector(".carousel-container");
 
 // define src img array
-const numberOfImages = 3;
+const numberOfImages = 7;
 const srcImages = [];
 for (let index = 1; index <= numberOfImages; index++) {
   srcImages.push(`image/natural_wander${index}.jpg`);
