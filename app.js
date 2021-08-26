@@ -47,19 +47,20 @@ console.log(circleBtns)
 
 //Counter
 let counter = 1;
+console.log("counter : "+counter)
 
 
 function clickCircleBtn(event) {
   event.target.classList.add("clicked");
-  carouselSlide.style.transform =
-    "translateX(" + -sizeContainer * event.target.id + "px)";
+  slideImages(event.target.id);
   carouselSlide.style.transition = "transform 0.5s ease-in-out";
+  console.log("circli count from " + counter);
   counter=event.target.id;
-  console.log(counter)
+  console.log("circli count to "+counter);
 }
 
 circleBtns.forEach((btn)=>{
-  btn.addEventListener('click',clickCircleBtn)
+  btn.addEventListener('click',clickCircleBtn);
 })
 
 
@@ -76,7 +77,7 @@ function slideImages(count) {
   carouselSlide.style.transform =
     "translateX(" + -sizeContainer * count + "px)";
 }
-slideImages();
+slideImages(counter);
 
 //Button Listeners
 nextBtn.addEventListener("click", () => {
