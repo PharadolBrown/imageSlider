@@ -1,5 +1,6 @@
-//My code is dynamic. you can easily add or reduce images in the collection just 1 line only!!
-//StepI : increase or decrease the value of a variable named "numberOfImage" (line 8)
+// To anyone are reading my code
+// My code is dynamic. you can easily add or reduce images in the collection just 1 line only!!
+// StepI : increase or decrease the value of a variable named "numberOfImage" (line 8)
 
 const carouselSlide = document.querySelector(".carousel-slide");
 const carouselContainer = document.querySelector(".carousel-container");
