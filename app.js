@@ -39,30 +39,42 @@ for (let index = 0; index < numberOfImages; index++) {
   circleBtn = document.createElement("i");
   circleBtn.classList.add("fas");
   circleBtn.classList.add("fa-circle");
-  circleBtn.setAttribute("id", index+1);
+  circleBtn.setAttribute("id", index + 1);
   circleBtnContainer.append(circleBtn);
 }
 const circleBtns = document.querySelectorAll(".fa-circle");
-console.log(circleBtns)
+console.log(circleBtns);
 
 //Counter
 let counter = 1;
-console.log("counter : "+counter)
-
+console.log("start counter : " + counter);
 
 function clickCircleBtn(event) {
-  event.target.classList.add("clicked");
+  // event.target.classList.add("clicked");
   slideImages(event.target.id);
   carouselSlide.style.transition = "transform 0.5s ease-in-out";
-  console.log("circli count from " + counter);
-  counter=event.target.id;
-  console.log("circli count to "+counter);
+  console.log("circle count from " + counter);
+  counter = event.target.id;
+  console.log("circle count to " + counter);
+  focusCircleBtn();
 }
 
-circleBtns.forEach((btn)=>{
-  btn.addEventListener('click',clickCircleBtn);
-})
+function focusCircleBtn() {
+  for (let index = 1; index <= numberOfImages; index++) {
+    console.log("counter : " + counter + " ==== " + index + " ?");
+    if (counter == index) {
+      console.log("---- true : " + index);
+      circleBtns[index - 1].classList.add("now");
+    }else{
+      circleBtns[index - 1].classList.remove("now");
+    }
+  }
+}
 
+circleBtns.forEach((btn) => {
+  btn.addEventListener("click", clickCircleBtn);
+  //
+});
 
 const carouselImages = document.querySelectorAll(".carousel-slide img");
 
@@ -70,12 +82,13 @@ const carouselImages = document.querySelectorAll(".carousel-slide img");
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
 
-
 let sizeContainer = carouselContainer.clientWidth;
 
 function slideImages(count) {
+  console.log(" now counter : " + count);
   carouselSlide.style.transform =
     "translateX(" + -sizeContainer * count + "px)";
+  focusCircleBtn();
 }
 slideImages(counter);
 
@@ -83,9 +96,9 @@ slideImages(counter);
 nextBtn.addEventListener("click", () => {
   if (counter >= carouselImages.length - 1) return;
   carouselSlide.style.transition = "transform 0.5s ease-in-out";
-  console.log("from counter : "+counter+"next");
+  console.log("from counter : " + counter + "next");
   counter++;
-  console.log("to counter " + counter+"next");
+  console.log("to counter " + counter + "next");
   carouselSlide.style.transform = slideImages(counter);
 });
 
@@ -100,7 +113,7 @@ prevBtn.addEventListener("click", () => {
 
 // Carousel Images
 carouselSlide.addEventListener("webkitTransitionEnd", () => {
-  console.log("start transition working");
+  // console.log("start transition working");
   if (carouselImages[counter].id === "lastClone") {
     console.log("transition slide is working");
     console.log(carouselImages[counter]);
