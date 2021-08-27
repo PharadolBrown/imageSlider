@@ -6,7 +6,7 @@
   font-family: 'Noto Sans',sans-serif;
 }
 body {
-  background-color:#000;
+  background-color:#fff;
   overflow-x: hidden;
   padding-bottom: 250px;
 }
@@ -20,7 +20,7 @@ h1 {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 450px;
+  width: 500px;
   margin: auto;
 }
 
@@ -72,7 +72,7 @@ h1 {
   font-weight: 400;
 }
 .circleBtnContainer i {
-  color: rgb(255, 255, 255);
+  color: #000;
   opacity: 0.4;
   transition: all 0.3s;
   background-color: #fff;
