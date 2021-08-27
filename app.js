@@ -8,6 +8,7 @@ const carouselContainer = document.querySelector(".carousel-container");
 // define src img array
 const numberOfImages = 7;
 const srcImages = [];
+
 for (let index = 1; index <= numberOfImages; index++) {
   srcImages.push(`image/natural_wander${index}.jpg`);
 }
@@ -17,7 +18,6 @@ srcImages.unshift(`image/natural_wander${lastCloneSrc}.jpg`);
 const firstCloneSrc = 1;
 srcImages.push(`image/natural_wander${firstCloneSrc}.jpg`);
 console.log(srcImages);
-
 //create element img & add first , last clone class to some img
 for (let index = 0; index <= srcImages.length - 1; index++) {
   const image = document.createElement("img");
@@ -31,6 +31,10 @@ for (let index = 0; index <= srcImages.length - 1; index++) {
   image.setAttribute("id", idImg);
   carouselSlide.append(image);
 }
+
+
+
+
 
 //create element circle button
 const circleBtnContainer = document.querySelector(".circleBtnContainer");
