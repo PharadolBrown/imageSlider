@@ -17,12 +17,10 @@ h1 {
   color: #fff;
 }
 .carousel-container {
-  /* background-color:rgb(255, 0, 0); */
   display: flex;
   justify-content: center;
   position: relative;
-  width: 400px;
-  /* width: 40%; */
+  width: 500px;
   margin: auto;
 }
 
