@@ -69,7 +69,7 @@ console.log("w container" + carouselContainer.clientWidth);
 console.log("w slide" + carouselSlide.clientWidth);
 
 //Counter
-let counter = 1;
+let counter = 4;
 console.log("define counter : " + counter);
 
 //Buttons
