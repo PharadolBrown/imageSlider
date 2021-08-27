@@ -27,8 +27,7 @@ for (let index = 0; index <= srcImages.length - 1; index++) {
   image.setAttribute("id", idImg);
   carouselSlide.append(image);
 }
-const carouselImages = document.querySelectorAll(".carousel-slide img");  // get images
-
+const carouselImages = document.querySelectorAll(".carousel-slide img"); // get images
 
 //create element circle button
 const circleBtnContainer = document.querySelector(".circleBtnContainer");
@@ -40,8 +39,6 @@ for (let index = 0; index < numberOfImages; index++) {
   circleBtnContainer.append(circleBtn);
 }
 const circleBtns = document.querySelectorAll(".fa-circle");
-
-
 
 function clickCircleBtn(event) {
   // event.target.classList.add("clicked");
@@ -68,6 +65,8 @@ circleBtns.forEach((btn) => {
   //
 });
 
+console.log("w container" + carouselContainer.clientWidth);
+console.log("w slide" + carouselSlide.clientWidth);
 
 //Counter
 let counter = 1;
@@ -78,11 +77,22 @@ const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
 
 let sizeContainer = carouselContainer.clientWidth;
+// let sizeContainer = carouselImages[0].clientWidth*carouselImages.length;
+
+for (let index = 0; index < carouselImages.length; index++) {
+  console.log(
+    "id img " +
+      carouselImages[index].id +
+      "width" +
+      carouselImages[index].clientWidth
+  );
+}
 
 function slideImages(count) {
   console.log(" now counter : " + count);
-  carouselSlide.style.transform ="translateX(" + -sizeContainer * count + "px)";
-  // console.log("-sizeContainer" + sizeContainer + "*" + count);
+  carouselSlide.style.transform =
+    "translateX(" + -sizeContainer * count + "px)";
+  console.log("-sizeContainer" + sizeContainer + "*" + count);
   focusCircleBtn();
 }
 slideImages(counter);
