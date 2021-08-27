@@ -17,10 +17,11 @@ h1 {
   color: #fff;
 }
 .carousel-container {
+  background-color:rgb(255, 0, 0);
   display: flex;
   justify-content: center;
   position: relative;
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 
@@ -61,7 +62,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .circleBtnContainer {
-  color: #fff;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -73,8 +73,8 @@ h1 {
   font-weight: 400;
 }
 .circleBtnContainer i {
-  color: #fff;
-  opacity: 0.5;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
   transition: all 0.3s;
   background-color: #fff;
   border-radius: 50%;
@@ -85,7 +85,11 @@ h1 {
 .circleBtnContainer .now {
     opacity: 1;
 }
-/* responsive  */
+
+
+
+
+/* ------responsive  */
 /* @media only screen and (max-width: 1441px) {
   .carousel-container {
     width: 75%;
