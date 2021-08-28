@@ -6,13 +6,13 @@ const numberOfImages = 7;
 const srcImages = [];
 
 for (let index = 1; index <= numberOfImages; index++) {
-  srcImages.push(`image/natural_wander${index}.jpg`);
+  srcImages.push(`image/natural_wonder${index}.jpg`);
 }
 // clone first & last image
 const lastCloneSrc = srcImages.length;
-srcImages.unshift(`image/natural_wander${lastCloneSrc}.jpg`);
+srcImages.unshift(`image/natural_wonder${lastCloneSrc}.jpg`);
 const firstCloneSrc = 1;
-srcImages.push(`image/natural_wander${firstCloneSrc}.jpg`);
+srcImages.push(`image/natural_wonder${firstCloneSrc}.jpg`);
 
 //create element img & add first , last clone class to some img
 for (let index = 0; index <= srcImages.length - 1; index++) {
