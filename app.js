@@ -71,7 +71,7 @@ function focusCircleBtn() {
 
 // animation slide
 let sizeContainer = carouselContainer.clientWidth;
-let counter = Math.ceil(numberOfImages / 2);
+let counter = 1;
 function slideImages(count) {
   carouselSlide.style.transform =
     "translateX(" + -sizeContainer * count + "px)";
