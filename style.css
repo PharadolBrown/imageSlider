@@ -9,11 +9,12 @@ body {
   background-color:#000;
   overflow-x: hidden;
   padding-bottom: 250px;
+  text-align: center;
 }
 
 h1 {
   font-weight: lighter;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
   color: #fff;
 }
@@ -67,11 +68,11 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
+  width: fit-content;
   cursor: pointer;
-  margin-top:10px ;
-  font-size: 12px;
+  padding-top:20px ;
   font-weight: 400;
+  height: 40px;
 }
 .circleBtnContainer i {
   color: rgb(255, 255, 255);
@@ -79,56 +80,38 @@ h1 {
   transition: all 0.3s;
   background-color: #fff;
   border-radius: 50%;
+  font-size: 16px;
+  margin: 0 10px;
 }
 .circleBtnContainer i:hover {
   opacity: 1;
 }
 .circleBtnContainer .now {
-    opacity: 1;
+  font-size: 22px;
+  opacity: 1;
 }
+
 
 
 
 
 /* ------responsive  */
-/* @media only screen and (max-width: 1441px) {
-  .carousel-container {
-    width: 75%;
-  }
-  body {
-    background-color: rgb(85, 84, 84);
-  }
-}
-@media only screen and (max-width: 1025px) {
-  body{
-    background-color: rgb(156, 102, 0);
-  }
-  h1 {
-    margin: 5px 0 10px 0;
-    font-weight: 100;
-  }
-  .carousel-container {
-    overflow: hidden;  
-  }
-}
-
 @media only screen and (max-width: 769px) {
   body {
-    background-color: rgb(125, 199, 29);
     padding-bottom: 100px;
   }
   .carousel-container {
     width: 96%;
     overflow: hidden;
   }
+  .arrows{
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 426px) {
-  body {
-    background-color: rgb(0, 0, 0);
-  }
   h1{
     font-size: 16px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 10px 0;
     font-weight: 100;
   }
   .carousel-container {
@@ -140,20 +123,21 @@ h1 {
   }
 
   .arrows i {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 400;
     border-radius: 2px;
     padding: 0 3px;
   }
-  .carousel-slide img {
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-  .circleBtnContainer {
-    width: 60%;
+  
+
+  .circleBtnContainer i {
+    font-size: 10px;
+    margin: 0 5px;
     margin-top: 5px;
-    font-size: 2px;
     font-weight: 100;
   }
-} */
+
+  .circleBtnContainer .now {
+    font-size: 14px;
+  }
+}
