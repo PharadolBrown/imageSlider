@@ -4,7 +4,7 @@
 const carouselContainer = document.querySelector(".carousel-container");
 const carouselSlide = document.querySelector(".carousel-slide");
 const circleBtnContainer = document.querySelector(".circleBtnContainer");
-const numberOfImages = 11; //---- increase the value up to 12. Because there're 11 images in folder image
+const numberOfImages = 7; //---- increase the value up to 12. Because there're 11 images in folder image
 const srcImages = [];
 
 createImages();
