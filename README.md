@@ -9,5 +9,5 @@ Access the application [here](https://pharadolbrown.github.io/imageSlider/)
 
 ### 1. Clone the repository
     git clone https://github.com/PharadolBrown/imageSlider.git
-### 2. Access the Project
+### 2. Navigate to the Project Directory
     cd imageSlider
