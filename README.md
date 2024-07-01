@@ -2,7 +2,7 @@
 A simple, lightweight, and dependency-free image slider built with pure JavaScript, HTML, and CSS.
 
 
-Access the application [here](https://pharadolbrown.github.io/imageSlider/)
+View the Live Demo [here](https://pharadolbrown.github.io/imageSlider/)
 
 
 ![Project Screenshot](https://img2.pic.in.th/pic/ImageSlider.png)
